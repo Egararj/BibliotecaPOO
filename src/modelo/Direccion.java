@@ -1,6 +1,8 @@
 package modelo;
 
 import excepciones.CampoVacioException;
+import excepciones.CodPostalException;
+import utilidades.ValidarCodPostal;
 
 public class Direccion {
 	private String calle;
@@ -12,7 +14,7 @@ public class Direccion {
 		
 	}
 
-	public Direccion(String calle, String poblacion, String provincia, String codPostal) throws CampoVacioException {
+	public Direccion(String calle, String poblacion, String provincia, String codPostal) throws CampoVacioException, CodPostalException {
 		this.setCalle(calle);
 		this.setPoblacion(poblacion);
 		this.setProvincia(provincia);
@@ -51,8 +53,9 @@ public class Direccion {
 		return codPostal;
 	}
 
-	public void setCodPostal(String codPostal) throws CampoVacioException {
+	public void setCodPostal(String codPostal) throws CampoVacioException, CodPostalException {
 		if(codPostal.length() == 0) throw new CampoVacioException();
+		ValidarCodPostal.ValidarCodPostal(codPostal, provincia);
 		this.codPostal = codPostal;
 	}
 
