@@ -1,0 +1,16 @@
+Clase Dirección en paquete modelo:
+Atributos: calle, poblacion, provincia, codPostal (String)
+
+Clase Usuario en paquete modelo:
+Atributos: nombre, apellido, dni, direccion (String) //dirección es la clase Dirección
+
+En utilidades:
+Método: validarCodPostal //recibe codPostal y provincia. Buscar como se compara los códigos postales postales de España. En esencia comprobar que los dos 
+						 //primeros dígitos se corresponda con su provincia. Almacenar la provincia con el número en Lista (busca cuál viene mejor)
+
+
+Excepciones:
+CampoVacioException
+CodPostalException
+
+Clase CompruebaUsuario en el paquete test
