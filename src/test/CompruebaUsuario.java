@@ -14,7 +14,6 @@ public class CompruebaUsuario {
 			System.out.println("Usuario creado correctamente");
 
 		} catch (CampoVacioException | DniException | CodPostalException e) {
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 		}
     }
