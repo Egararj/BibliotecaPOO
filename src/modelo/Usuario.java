@@ -1,6 +1,7 @@
 package modelo;
 
 import excepciones.CampoVacioException;
+import excepciones.CodPostalException;
 import excepciones.DniException;
 
 public class Usuario {
@@ -13,7 +14,7 @@ public class Usuario {
 
 	}
 
-	public Usuario(String nombre, String apellido, String dni, Direccion direccion) throws CampoVacioException, DniException {
+	public Usuario(String nombre, String apellido, String dni, Direccion direccion) throws CampoVacioException, DniException, CodPostalException {
 		this.setNombre(nombre);
 		this.setApellido(apellido);
 		this.setDni(dni);
@@ -63,7 +64,7 @@ public class Usuario {
 		return direccion;
 	}
 
-	public void setDireccion(Direccion direccion) {
+	public void setDireccion(Direccion direccion) throws CampoVacioException, CodPostalException{
 		this.direccion = direccion;
 	}
 	
