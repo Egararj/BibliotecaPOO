@@ -1,4 +1,4 @@
-package test;
+package prueba;
 
 import excepciones.CampoVacioException;
 import excepciones.CodPostalException;
@@ -12,6 +12,7 @@ public class CompruebaUsuario {
         try {
 			Usuario usuario = new Usuario("pepe", "garcia", "21150568K", new Direccion("fuentes", "cadiz", "cadiz", "11400"));
 			System.out.println("Usuario creado correctamente");
+			
 
 		} catch (CampoVacioException | DniException | CodPostalException e) {
 			System.out.println(e.getMessage());

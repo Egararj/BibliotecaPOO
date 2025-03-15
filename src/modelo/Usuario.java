@@ -1,10 +1,13 @@
 package modelo;
 
+import java.io.Serializable;
+
 import excepciones.CampoVacioException;
 import excepciones.CodPostalException;
 import excepciones.DniException;
 
-public class Usuario {
+public class Usuario implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private String apellido;
 	private String dni;
